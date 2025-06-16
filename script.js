@@ -1,3 +1,5 @@
+import { injectSpeedInsights } from '@vercel/speed-insights';
+injectSpeedInsights();
 const counterEl = document.getElementById("counter");
 const dotsEl = document.getElementById("dots");
 const preloader = document.querySelector(".preloader");
