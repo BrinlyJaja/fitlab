@@ -38,6 +38,20 @@
   align-items: baseline;
   gap: 0.5rem;
 }
+/* Loading Message */
+.preloader-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Akony', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  color: #fff;
+  opacity: 0.85;
+  text-align: center;
+  line-height: 1.4;
+  z-index: 1001;
+}
 
 .counter {
   font-family: 'Akony', sans-serif;
