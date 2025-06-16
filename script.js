@@ -110,6 +110,10 @@ function endPreloader() {
     onComplete: () => {
       preloader.style.display = 'none';
       document.body.style.overflow = 'auto'; // enable scroll again
+        // ✅ Reveal hamburger now
+      const hamburger = document.querySelector(".hamburger");
+      hamburger.style.visibility = "visible";
+      hamburger.style.pointerEvents = "auto";
       mainContent.classList.remove("hidden");
       mainContent.classList.add("visible");
     }

@@ -148,6 +148,7 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  visibility: hidden;
 }
 .hamburger span {
   background: #fff;
