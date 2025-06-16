@@ -143,4 +143,3 @@ function startMarquee() {
 // Start everything
 updateCounter();
 startMarquee();
-
