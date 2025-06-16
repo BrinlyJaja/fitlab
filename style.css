@@ -31,6 +31,7 @@
   justify-content: flex-start;
   padding: 2rem;
   z-index: 1000;
+  overflow: hidden;
 }
 .preloader-inner {
   display: flex;
@@ -189,3 +190,4 @@
   opacity: 0;
   transform: translateY(20px);
 }
+
