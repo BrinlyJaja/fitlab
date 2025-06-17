@@ -59,7 +59,20 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script defer src="https://speed.vercel.com/sdk.js" data-sdk-name="vercel-speed-insights"></script>
+    <script>
+        // Initialize Speed Insights
+        window.si = window.si || function () { 
+            (window.siq = window.siq || []).push(arguments); 
+        };
+        
+        // Load the Speed Insights script
+        (function() {
+            const script = document.createElement('script');
+            script.src = '/_vercel/speed-insights/script.js';
+            script.defer = true;
+            document.head.appendChild(script);
+        })();
+    </script>
   <script src="script.js"></script>
 </body>
 </html>
