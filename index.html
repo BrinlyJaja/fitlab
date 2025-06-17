@@ -73,6 +73,20 @@
             document.head.appendChild(script);
         })();
     </script>
+      <script>
+        // Initialize Vercel Analytics
+        window.va = window.va || function () { 
+            (window.vaq = window.vaq || []).push(arguments); 
+        };
+        
+        // Load the Analytics script
+        (function() {
+            const script = document.createElement('script');
+            script.src = '/_vercel/insights/script.js';
+            script.defer = true;
+            document.head.appendChild(script);
+        })();
+    </script>
   <script src="script.js"></script>
 </body>
 </html>
