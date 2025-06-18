@@ -1,4 +1,6 @@
 
+
+
 const counterEl = document.getElementById("counter");
 const dotsEl = document.getElementById("dots");
 const preloader = document.querySelector(".preloader");
@@ -155,3 +157,32 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.left = `${e.clientX}px`;
   cursor.style.top = `${e.clientY}px`;
 });
+
+
+window.addEventListener("load", () => {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+  ScrollSmoother.create({
+    wrapper: "#smooth-wrapper",
+    content: "#smooth-content",
+    smooth: 2.5,
+    effects: true,
+    normalizeScroll: true,
+    smoothTouch: 0.1
+  });
+
+  ScrollTrigger.create({
+    trigger: ".sticky-footer",
+    start: "top bottom",
+    end: "bottom bottom",
+    pin: true,
+    scrub: true,
+    markers: true 
+  });
+});
+
+console.log(
+  document.querySelector('#smooth-wrapper'),
+  document.querySelector('#smooth-content'),
+  document.querySelector('.sticky-footer')
+);

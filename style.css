@@ -242,3 +242,235 @@
 .custom-cursor.hovering {
   transform: scale(1.5);
 }
+
+@font-face {
+  font-family: 'ProjektBlackbird';
+  src: url('fonts/Projekt Blackbird v2.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Test Sections */
+.test-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:  #111;
+}
+
+.test-section.alt {
+  background: #111;
+}
+
+.section-content {
+  text-align: center;
+  color: white;
+}
+
+.section-content h1 {
+  font-size: 0.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: "Akony", sans-serif;
+}
+
+.section-content p {
+  font-size: 1.25rem;
+  opacity: 0.75;
+}
+
+/* Footer Styles */
+.sticky-footer {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background: #000;
+}
+
+.footer-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer-heading {
+  margin-bottom: 4rem;
+}
+
+.footer-heading h2 {
+  font-family: "Akony", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  font-weight: normal;
+  line-height: 1.2;
+  color: #32d74b;
+  margin-bottom: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+/* Email Glass Box */
+.email-section {
+  display: flex;
+  align-items: center;
+}
+
+.glass-box {
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.glass-box:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.glass-box span {
+  font-family: "Akony", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #32d74b;
+}
+
+/* Connect Section */
+.connect-section h3 {
+  font-family: "Akony", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #32d74b;
+  opacity: 0.75;
+  margin-bottom: 1.5rem;
+}
+
+.connect-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.connect-nav a {
+  font-family: "Akony", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #32d74b;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.connect-nav a:hover {
+  opacity: 0.75;
+}
+
+/* Brand Section */
+.brand-section {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 2rem 2rem;
+}
+
+.brand-text {
+  font-family: "Akony", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 15rem);
+  font-weight: bold;
+  line-height: 0.9;
+  letter-spacing: 0.05em;
+  color: #32d74b;
+  transform: scaleX(1.2);
+  transform-origin: left center;
+  white-space: nowrap;
+}
+
+/* Hero section */
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .marquee-text {
+    font-size: 0.85rem;
+    padding-right: 2rem;
+  }
+
+  .counter {
+    font-size: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+
+  /* On mobile: show default cursor and hide custom */
+  body {
+    cursor: default;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+
+  /* Footer Mobile Styles */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-content {
+    padding: 2rem 1rem;
+  }
+
+  .brand-section {
+    padding: 0 1rem 1rem;
+  }
+
+  .section-content h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Copyright Line */
+.brand-section .copyright {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 1rem;
+  font-family: 'ProjektBlackbird', sans-serif;
+}
