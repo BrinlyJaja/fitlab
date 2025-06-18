@@ -55,7 +55,7 @@
   </div>
 
   
-  <div class="custom-cursor"></div>
+  <div class="custom-cursor" ></div>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -103,6 +103,24 @@
     target.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
     target.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
   });
+</script>
+
+
+<script>
+  if (window.innerWidth > 768) {
+    const cursor = document.querySelector('.custom-cursor');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    const hoverTargets = document.querySelectorAll('a, button, .hover-target');
+    hoverTargets.forEach(target => {
+      target.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+      target.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+    });
+  }
 </script>
 
 </body>

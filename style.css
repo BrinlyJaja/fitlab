@@ -17,6 +17,10 @@
     color: #fff;
     overflow-x: hidden;
   }
+
+  body, * {
+  cursor: none !important;
+}
   
   /* Preloader */
 .preloader {
@@ -25,7 +29,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-    background: 
+  background: 
       #111;
   display: flex;
   align-items: flex-end;
@@ -136,7 +140,7 @@
   }
   
   /* Responsive */
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .marquee-text {
       font-size: 0.85rem;
       padding-right: 2rem;
@@ -154,8 +158,13 @@
     display: none;
   }
 
+  /* On mobile: show default cursor and hide custom */
   body {
     cursor: default;
+  }
+
+  .custom-cursor {
+    display: none;
   }
   }
   
@@ -215,10 +224,7 @@
   transform: translateY(20px);
 }
 
-/* Hide the default cursor */
-body {
-  cursor: none;
-}
+
 
 /* Custom cursor */
 .custom-cursor {
