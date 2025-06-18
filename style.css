@@ -25,7 +25,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #111;
+    background: 
+      #111;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -148,6 +149,14 @@
     .hero h1 {
       font-size: 1.5rem;
     }
+
+      .custom-cursor {
+    display: none;
+  }
+
+  body {
+    cursor: default;
+  }
   }
   
   /* Hamburger Styles */
@@ -204,4 +213,26 @@
   text-decoration: none;
   opacity: 0;
   transform: translateY(20px);
+}
+
+/* Hide the default cursor */
+body {
+  cursor: none;
+}
+
+/* Custom cursor */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  pointer-events: none;
+  z-index: 9999;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  mix-blend-mode: difference; /* Auto-inverts on contrast */
+}
+
+.custom-cursor.hovering {
+  transform: scale(1.5);
 }
