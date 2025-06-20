@@ -108,6 +108,7 @@
     background: #1a1a1a;
     padding: 10px 0;
     position: relative;
+    z-index:10;
   }
   
   .marquee-track {
@@ -260,7 +261,12 @@
 }
 
 .test-section.alt {
-  background: #111;
+  background: #dedcdc;
+}
+
+.test-section.last {
+  z-index: 1;
+  position: relative;
 }
 
 .section-content {
@@ -283,15 +289,16 @@
 /* Footer Styles */
 .sticky-footer {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-between;
   background: #000;
+  z-index:0;
 }
 
 .footer-content {
-  flex: 1;
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -422,48 +429,23 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .marquee-text {
-    font-size: 0.85rem;
-    padding-right: 2rem;
-  }
-
-  .counter {
-    font-size: 2rem;
-  }
-
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .custom-cursor {
-    display: none;
-  }
-
-  /* On mobile: show default cursor and hide custom */
-  body {
-    cursor: default;
-  }
-
-  .custom-cursor {
-    display: none;
-  }
 
   /* Footer Mobile Styles */
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .footer-content {
-    padding: 2rem 1rem;
+    padding: 1rem 0.5rem;
   }
 
   .brand-section {
-    padding: 0 1rem 1rem;
+    padding: 0 0.5rem 0.5rem;
   }
 
   .section-content h1 {
-    font-size: 2rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -471,6 +453,7 @@
 .brand-section .copyright {
   font-size: 0.75rem;
   color: #999;
-  margin-top: 1rem;
+  margin-top: auto;
+  padding:2rem;
   font-family: 'ProjektBlackbird', sans-serif;
 }

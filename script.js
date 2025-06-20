@@ -1,5 +1,6 @@
 
 
+console.log("GSAP version:", gsap.version); 
 
 const counterEl = document.getElementById("counter");
 const dotsEl = document.getElementById("dots");
@@ -159,27 +160,26 @@ document.addEventListener('mousemove', (e) => {
 });
 
 
-window.addEventListener("load", () => {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-  ScrollSmoother.create({
-    wrapper: "#smooth-wrapper",
-    content: "#smooth-content",
-    smooth: 2.5,
-    effects: true,
-    normalizeScroll: true,
-    smoothTouch: 0.1
-  });
 
-  ScrollTrigger.create({
-    trigger: ".sticky-footer",
-    start: "top bottom",
-    end: "bottom bottom",
-    pin: true,
-    scrub: true,
-    markers: true 
-  });
+// Initialize ScrollSmoother
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+
+ScrollSmoother.create({
+  smooth: 3,
+  effects: true,
+  smoothTouch: 0.1,
+  normalizeScroll: true
 });
+
+ScrollTrigger.create({
+  trigger: ".sticky-footer",
+  pin: true,
+  start: "bottom bottom",
+  end: "+=100%"
+});
+
+
 
 console.log(
   document.querySelector('#smooth-wrapper'),
