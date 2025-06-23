@@ -1,6 +1,6 @@
 
 
-console.log("GSAP version:", gsap.version); 
+
 
 const counterEl = document.getElementById("counter");
 const dotsEl = document.getElementById("dots");
@@ -166,7 +166,7 @@ document.addEventListener('mousemove', (e) => {
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 ScrollSmoother.create({
-  smooth: 3,
+  smooth: 2,
   effects: true,
   smoothTouch: 0.1,
   normalizeScroll: true
@@ -181,8 +181,3 @@ ScrollTrigger.create({
 
 
 
-console.log(
-  document.querySelector('#smooth-wrapper'),
-  document.querySelector('#smooth-content'),
-  document.querySelector('.sticky-footer')
-);
